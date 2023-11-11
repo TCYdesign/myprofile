@@ -1,0 +1,82 @@
+#contact-div {
+  margin-top: 15px;
+}
+
+.gradient1{
+  display: inline-block;
+  color:#fff;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 18px 60px;
+  border-radius:30px;
+  text-decoration: none;
+  outline: none;
+  /*背景の色と形状*/
+  background: linear-gradient(270deg, #3bade3 0%, #576fe6 25%, #b050d3 51%, #ff7835 100%);
+  background-position: 1% 50%;
+  background-size: 200% auto;
+  transition: all 0.3s ease-out;
+}
+
+.gradient1:hover {
+  color: #fff;
+  background-position: 99% 50%;
+}
+
+body{
+  vertical-align:middle; 
+  padding: 100px 0;
+  text-align: center;
+}
+/* 矢印 -------------------------------------*/
+#yajirusi-div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+#yajirusi {
+  margin-right: 50px;
+}
+#yajirusi2 {
+  margin-left: 50px;
+}
+#yajirusi {
+  animation-name:updown; 
+  animation-delay: 0s;   /* 開始時間指定 */
+  animation-duration: 3s;   /* 動作時間の指定 */
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite; 
+}
+
+@keyframes updown {
+0% {
+  transform: translateY(0);
+}
+50% {
+  transform: translateY(-12px);
+}
+100% {
+  transform: translateY(0px);
+}
+}
+
+#yajirusi2 {
+  animation-name:updown1; 
+  animation-delay:0s;   /* 開始時間指定 */
+  animation-duration: 3s;   /* 動作時間の指定 */
+  animation-timing-function: ease-out;  
+  animation-iteration-count: infinite; 
+}
+
+@keyframes updown1 {
+0% {
+  transform: translateY(0);
+}
+50% {
+  transform: translateY(-12px);
+}
+100% {
+  transform: translateY(0px);
+}
+}
