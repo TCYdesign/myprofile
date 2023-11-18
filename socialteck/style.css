@@ -5,9 +5,18 @@ p {
   font-size: 15px;
 }
 @media screen and (min-width: 768px) {
+.carousel {
+  width: 100%;
+}
+
+.carouselImg {
+  width: 100%;
+}
+
+
 body {
-  max-width: 1080px;
-  min-width: 960px;
+  max-width: 1300px;
+  /* min-width: 900px; */
   margin: 0 auto 0 auto;
 }
 header {
@@ -19,7 +28,6 @@ header {
   font-size: 14px;
   padding-top: 15px;
 }
-/* リンクの下線を消す「クラス名>a」にしないと他のaにも設定が反映されてしまう */
 #nav-pc > a {
   text-decoration: none;
   margin-left: 20px;
@@ -137,7 +145,6 @@ h3 {
   height: 480px;
   margin-left: 20px;
 }
-/* 画像：width100%を指定して親からはみ出さないようにする */
 .product-photo {
   width: 100%;
 }
@@ -464,10 +471,11 @@ footer {
 /* プロダクトのページ */
 #product-main {
   height: 496px;
-  width: 100%;
+  width: 98%;
   background-image: url("images/product/product-main.png");
   background-repeat: no-repeat;
   background-position-y: center;
+  margin:10px;
 }
 #product-title {
   background-color: #2710d5;
@@ -496,41 +504,37 @@ footer {
   font-size: 16px;
 }
 .product-section1 {
-  position: relative;
-  margin: 20px;
-  height: 340px;
+  margin: 20px 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 .product-section1 > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 450px;
+  width: 50%;
+  max-height: 300px;
+  min-height: 300px;
   margin: 0 40px 30px 0;
   border-radius: 0 432px 0 0;
 }
 .product-section1 > div {
-  position: absolute;
-  top: 0;
-  left: 480px;
+  width: auto;
+  margin-right: 30px;
 }
+
 .product-section2 {
-  position: relative;
-  margin: 20px;
-  height: 340px;
+  display: flex;
+  align-items: center;
+  margin: 20px 10px;
 }
 .product-section2 > img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 450px;
-  margin: 0 0 30px 40px;
+  width: 50%;
+  max-height: 300px;
   border-radius: 432px 0 0 0;
+  
 }
 .product-section2 > div {
-  width: 500px;
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: auto;
+  margin-right: 30px;
 }
 .product-h2 {
   color: #2710d5;
@@ -546,8 +550,15 @@ footer {
 }
 /* ★★スマホ用のスタイル */
 @media screen and (max-width: 767px) {
+  .carousel {
+    width: 100%;
+  }
+  .carouselImg {
+    width: 95%;
+    margin: 0 auto;
+  }
+
   body {
-    min-width: 375px;
     margin: 0;
   }
   /* PC用ナビ非表示 */
@@ -556,8 +567,9 @@ footer {
   }
   /* ハンバーガーメニュー */
   #menu-sp {
-    float: right;
-    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
   #nav-sp {
     background-color: #2710d5;
@@ -684,9 +696,10 @@ footer {
     background-color: #ffffff;
     position: absolute;
     left: 0;
-    bottom: 50px;
+    bottom: 10%;
     padding: 20px;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.05);
+    max-height: 75%;
   }
   .product-explain > span {
     color: #2710d5;
@@ -699,6 +712,7 @@ footer {
   }
   .product-photo {
     width: 100%;
+    max-height: 100%;
   }
   #product-more > img {
     margin: 0 0 -42px 20px;
@@ -711,10 +725,11 @@ footer {
     display: flex;
     flex-direction: column;
   }
+  
+ 
 
   .culture-table {
     width: 100%;
-    padding-right: 20px;
     order: 2;
   }
   .culture-img {
@@ -727,7 +742,7 @@ footer {
   }
   /* 番号 */
   .culture-num {
-    font-size: 80px;
+    font-size: 60px;
     color: #2710d5;
   }
   /* 英語の見出し */
@@ -757,7 +772,7 @@ footer {
   /* 番号の背景画像 */
   .vision-box > img {
     width: 100%;
-    height: auto;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -780,7 +795,7 @@ footer {
     margin: 0;
   }
   .vision-box > span > p {
-    margin-top: 10px;
+    margin: 10px;
   }
   #company {
     margin: 0 20px;
@@ -859,7 +874,6 @@ footer {
     border-bottom-color: #707070;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    min-width: 300px;
     width: 100%;
   }
   .contact-textarea {
@@ -999,6 +1013,10 @@ footer {
       margin: 0;
     }
     /* プロダクト */
+    #product div {
+      margin-bottom: 20px;
+    }
+
     #product-main {
       height: 256px;
       width: 100%;
@@ -1037,7 +1055,8 @@ footer {
       margin: 20px;
     }
     .product-section1 > img {
-      width: 100%;
+      width: 90%;
+      max-height: 400px;
       border-radius: 0 300px 0 0;
     }
     .product-section2 {
@@ -1047,7 +1066,8 @@ footer {
     }
     .product-section2 > img {
       order: 1;
-      width: 100%;
+      width: 90%;
+      max-height: 400px;
       border-radius: 300px 0 0 0;
     }
     .product-section2 > div {
@@ -1061,5 +1081,8 @@ footer {
     .product-h3 {
       font-size: 28px;
       margin: 0;
+    }
+    .button-more {
+      max-width: 80%;
     }
 }
