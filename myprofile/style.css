@@ -30,7 +30,7 @@ nav {
   color: #000000;
 }
 
-#main-pic {
+.main-pic {
   width: 100%;
 }
 
@@ -94,6 +94,19 @@ footer p {
 footer {
   margin: 100px 0 50px 0;
 }
+
+#pagetop {
+  position: fixed;
+  bottom: 38px;
+  right: 20px;
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  padding: 28px 24px;
+  border-radius: 50%;
+}
+
 }
 /* スマホ用 */
 @media (max-width: 767px) {
@@ -128,7 +141,7 @@ footer {
     color: #000000;
   }
   
-  #main-pic {
+  .main-pic {
     width: 100%;
   }
   
@@ -184,5 +197,17 @@ footer {
   
   footer {
     margin: 100px 0 50px 0;
+  }
+
+  #pagetop {
+    position: fixed;
+    bottom: 38px;
+    right: 30px;
+    background-color: #272727;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 12px;
+    border-radius: 50%;
   }
 }

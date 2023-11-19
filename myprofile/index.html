@@ -5,20 +5,34 @@
     <title>My Profile</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- slickの読み込み -->
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
   </head>
   <body>
     <header>
       <nav>
       <div id="nav-left">  
-        <a href="#index.html"><h1>My Profile</h1></a>
+        <a href="#index.html"><h1 class="nav">My Profile</h1></a>
       </div>  
       <div id="nav-right">
-        <a href="#about"><h1>About</h1></a>
-        <a href="#works"><h1>Works</h1></a>
+        <a href="#about"><h1 class="nav">About</h1></a>
+        <a href="#works"><h1 class="nav">Works</h1></a>
       </div>
       </nav>
     <main>
-      <img id="main-pic" src="images/main.png" alt="カメラの写真">
+      <div class="fade" >
+      <div>
+      <img src="images/main.png" alt="写真１" class="main-pic">
+      </div>
+      <div>
+      <img src="images/main2.png" alt="写真２" class="main-pic">
+      </div>
+      <div>
+      <img src="images/main3.png" alt="写真３" class="main-pic">
+      </div>
+      </div>
+      <!-- <img id="main-pic" src="images/main.png" alt="カメラの写真"> -->
       <article>
         <h1 id="about">About</h1>
         <section id="about-section">
@@ -55,17 +69,16 @@
         </section>
       </article>
       <footer>
+        <a href="#" id="pagetop">TOP</a>
         <p>&copy MyProfile.All rights reserved</p>
       </footer>
     </main>  
     </header>
-    
-
-
-
-
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="script.js"></script>
   </body>
-
-
-
 </html>
