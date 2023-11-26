@@ -28,7 +28,7 @@ $(window).scroll(()=>{
 
 $('a[href^="#"]').click(function () {
     const speed = 500;
-    const href = $('a[href^="#"]').attr('href');
+    const href = $(this).attr('href');
     let $target;
     if (href == '#') {
       $target = $('html');
@@ -40,6 +40,7 @@ $('a[href^="#"]').click(function () {
     $('html, body').animate({ 'scrollTop': position }, speed, 'swing');
     return false;
   });
+
 
   $(window).scroll(function(){
     $('section').each(function (){
