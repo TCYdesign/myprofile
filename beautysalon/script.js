@@ -15,7 +15,7 @@ $('a[href^="#"]').click(function () {
 });
 
 $(window).scroll(function () {
-  if ($(this).scrollTop() > 4000) {
+  if ($(this).scrollTop() > 3000) {
     $('#page-top').fadeIn();
   } else {
     $('#page-top').fadeOut();
