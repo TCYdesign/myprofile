@@ -579,7 +579,7 @@ footer {
   #page-top {    
     position: fixed;
     bottom: 200px;
-    right: 20px;
+    right: 00px;
     background-color: black;
     color: white;
     text-align: center;
