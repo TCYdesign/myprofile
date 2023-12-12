@@ -1,4 +1,6 @@
-
+body {
+  margin: 0;
+}
 
 header {
   display: flex;
@@ -95,7 +97,7 @@ section h1 {
 }
 
 .flex div {
-  padding: 10px;
+  padding: 0px;
 }
 
 .flex div img {
@@ -118,7 +120,8 @@ footer {
 #page-top {    
   position: fixed;
   bottom: 38px;
-  right: 20px;
+  right: 25px;
+  margin-right: 10px;
   background-color: rgb(55, 55, 55);
   color: white;
   text-align: center;
@@ -228,7 +231,7 @@ footer {
   }
 
   #page-top {
-    right: 55px;
+    margin-right:10px;
   }
 
   #works-div div {

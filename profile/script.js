@@ -35,7 +35,7 @@ $(function () {
 
 
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 1300) {
+    if ($(this).scrollTop() > 2100) {
       $('#page-top').fadeIn();
     } else {
       $('#page-top').fadeOut();
