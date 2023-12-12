@@ -1,0 +1,71 @@
+header img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: top;
+}
+
+#main-div {
+  text-align: center;
+}
+
+#recipe-flex {
+  display: flex;
+  width: 100%;
+}
+
+#recipe-flex img {
+  width: 100%;
+  object-fit: cover;
+}
+
+
+#button {
+  border: 1px solid black;
+  padding: 5px 30px;
+  margin: 50px auto 10px auto;
+  display: inline-block;
+}
+
+#button:hover {
+  background-color: black;
+  color: white;
+}
+
+#button-div {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+}
+
+#footer-flex {
+  display: flex;
+  justify-content: center;
+}
+
+#footer-flex p {
+  margin: 50px 10px 0 0;
+}
+
+@media screen and (max-width: 475px){
+  #recipe-flex {
+    display: flex;
+    flex-direction: column;
+  }
+  #recipe-flex img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  #main-div {
+    margin-bottom: 50px;
+  }
+  header img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+  }
+}
