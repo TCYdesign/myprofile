@@ -1,3 +1,21 @@
+
+$(function(){
+
+$('a[href^="#"]').click(function () {
+  const speed = 800;
+  const href = $(this).attr('href');
+  let $target;
+  if (href == '#') {
+    $target = $('html');
+  }
+  else {
+    $target = $(href);
+  }
+  const position = $target.offset().top;
+  $('html, body').animate({ 'scrollTop': position }, speed, 'swing');
+  return false;
+});
+
 $(window).scroll(function () {
   const scrollAmount = $(window).scrollTop();
   const windowHeight = $(window).height();
@@ -18,4 +36,6 @@ $(window).scroll(function () {
       $(this).addClass('box rotateX2');
     }
   });
+});
+
 });
