@@ -1,0 +1,355 @@
+
+body {
+  width: 100%;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 60px auto;
+  width: 100%;
+}
+
+#header-right {
+  margin-top: 30px;
+}
+
+#header-right a {
+  text-decoration: none;
+  color: black;
+  margin-left: 20px;
+  margin-bottom:20px;
+}
+
+/*==================================================
+　5-3-1 中心から外に線が伸びる（下部）
+===================================*/
+
+.gnavi{
+  /*線の基点とするためrelativeを指定*/
+position: relative;
+padding-bottom: 5px;
+}
+
+.gnavi::after {
+  content: '';
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /*線の形状*/
+  width: 100%;
+  height: 2px;
+  background:#636363;
+  /*アニメーションの指定*/
+  transition: all .3s;
+  transform: scale(0, 1);/*X方向0、Y方向1*/
+  transform-origin: center top;/*上部中央基点*/
+}
+
+/*現在地とhoverの設定*/
+
+.gnavi:hover::after {
+  transform: scale(1, 1);/*X方向にスケール拡大*/
+}
+
+
+#icon {
+  width: 20px;
+}
+
+main {
+  width: 100%;
+}
+
+#main-pic {
+  width: 100%;
+}
+
+#about h1 {
+  text-align: center;
+}
+
+#about-box {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#about-box>p {
+  font-weight: bold;
+  border-bottom: 1px solid gray;
+  width: fit-content;
+}
+
+#about-div2 dt{
+  float: left;
+}
+
+#about-div2 dt::after {
+  content: ":";
+}
+
+#works {
+  margin-top: 100px;
+}
+
+#works-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#works-flex img{
+  width: 320px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.rotateX{
+  animation-name:rotateXAnime;
+  animation-duration:1.8s;
+  animation-fill-mode:forwards;
+}
+
+@keyframes rotateXAnime{
+  from{
+    transform: rotateX(0);
+    }
+  to{
+    transform: rotateX(-360deg);
+    }
+}
+
+.rotateX2{
+  animation-name:rotateXAnime2;
+  animation-duration:2.3s;
+  animation-fill-mode:forwards;
+}
+
+@keyframes rotateXAnime2{
+  from{
+    transform: rotateX(0);
+    }
+  to{
+    transform: rotateX(-360deg);
+    }
+}
+
+
+.box,.box2 {
+  transition: all 0.5s ease;
+  opacity: 1;
+}
+
+.box img:hover,.box2 img:hover {
+  opacity: 0.7;
+  transform: translateY(-20px);
+}
+
+
+#news-div1 {
+  max-width: 960px;
+  width: 100%;
+  padding: 4%;
+}
+
+#news {
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+#news-div {
+  margin: 0 auto;
+  font-size: 0.9em;
+  width: 85%;
+}
+
+#news-div1 dt {
+  float: left;
+  width:fit-content;
+  padding: 15px 50px 15px 15px;
+  border-bottom: 1px solid gray;
+}
+
+#news-div1 dd {
+ padding:15px;
+ border-bottom: 1px solid gray;
+ width: 85%;
+}
+
+#dt-top {
+  border-top: 1px solid gray;
+}
+
+#dd-top {
+  border-top: 1px solid gray;
+}
+
+#contact h1 {
+  text-align: center;
+}
+
+#contact{
+  max-width: 960px;
+  text-align: center;
+  margin-top: 60px;
+  padding: 6%;
+}
+
+#form {
+  margin-top: 50px;
+  text-align: left;
+}
+
+#form label {
+  text-align: left;
+}
+
+
+#form dt{
+  float: left;
+  width: 15%;
+  margin-bottom: 5px;
+}
+
+#form dd {
+  margin-bottom: 5px;
+}
+
+#form dd input{
+  width: 85%;
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+#form dd textarea{
+  width: 85%;
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+#contact-a {
+  margin-top: 15px;
+  border: 1px solid black;
+  display: inline-block;
+  padding: 0 80px;
+  background-color: rgb(48, 48, 48);
+}
+
+#contact-a:hover {
+  background-color: rgb(160, 160, 160);
+  border: 1px solid rgb(160, 160, 160);
+}
+
+#contact-a a {
+  text-decoration: none;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  margin-top: 100px;
+  background-color: rgb(43, 43, 43);
+  color: white;
+}
+@media screen and (max-width: 959px){
+  body {
+    box-sizing: border-box;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+
+  #header-left h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  #header-right {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    flex-wrap:wrap;
+  }
+
+  #works-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #works{
+    text-align: center;
+  }
+  
+  #works-flex img{
+    width: 80%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  #news-div1 {
+    max-width: 100%;
+    padding: 4%;
+  }
+
+  header,#about-div,#news-div1 {
+    width: 100%;
+  }
+
+
+
+  #about-box {
+    width: 85%;
+  }
+ 
+ #news-div {
+  width: 100%;
+  text-align: left;
+ }
+
+  #news-div1 dt {
+    float: none;
+    padding: 0;
+    border-top: 0;
+    border-bottom: 0;
+    padding-top: 10px;
+  }
+  
+  #news-div1 {
+    padding: 0;
+  }
+
+
+
+  #news-div dd {
+   text-decoration: none;
+   margin: auto ;
+   padding: 0 0 10px 0;
+   border-bottom: 1px solid gray;
+   width: auto;
+  }
+
+  #dt-top {
+    border-top: 0;
+   
+  }
+  #dd-top {
+    border-top: 0;
+  }
+  
+  #contact {
+    padding: 0;
+  }
+  
+  #form {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
