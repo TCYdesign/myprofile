@@ -893,7 +893,7 @@ header {
 
   #about-flex-right dt{
     float: none;
-    width: 30%;
+    width: 100%;
     text-align: left;
     font-size: 16px;
   }
@@ -1057,7 +1057,28 @@ header {
   
   #enkaku dd {
     width: 80%;
-    padding-left:4em ;
+    padding-left:9em ;
+    font-size: 14px;
+    padding-top: 5px;
+  }
+}
+@media screen and (max-width: 570px){
+  #enkaku dd {
+    width: 80%;
+    padding-left:6em ;
+    font-size: 14px;
+    padding-top: 5px;
+  }
+}
+@media screen and (max-width: 468px){
+  #about-dl{
+    margin: 15px 5px;
+    max-width: 85%;
+  }
+
+  #enkaku dd {
+    width: 80%;
+    padding-left: 5em ;
     font-size: 14px;
     padding-top: 5px;
   }

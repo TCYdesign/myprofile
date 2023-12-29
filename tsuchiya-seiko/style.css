@@ -91,7 +91,12 @@ header {
 }
 
 @media screen and (max-width: 960px){
-
+  #header-right {
+    background-color: #262626;
+    display: flex;
+    align-items: center;
+    display: none;
+  }
 }
 
 /* -----------headerここまで------------*/
@@ -729,7 +734,7 @@ header {
   font-size: 24px;
 }
 
-@media screen and (max-width: 960px){
+@media screen and (max-width: 1000px){
 
   .white-center {
     width: 25%;
@@ -754,7 +759,7 @@ header {
   }
   
   .product p {
-    font-size: 16px;
+    font-size: 2.5vw;
     color: #fff;
     width: 90%;
     margin: 0 auto;
@@ -778,9 +783,18 @@ header {
   .btn-2 span {
     font-size: 20px;
   }
+
+  #product-div .product span {
+    display: block;
+  }
 }
 
-@media screen and (max-width: 560px){
+@media screen and (max-width: 580px){
+  .product p {
+    font-size: 14px;
+  }
+  
+
   .white-center {
     width: 20%;
     height: 2px;
@@ -810,10 +824,11 @@ header {
   
  .btn-2 span {
     font-size: 3.5vw;
+    margin-top: 3px;
   }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 430px){
   .white-center {
     width: 12%;
     height: 2px;
@@ -821,6 +836,15 @@ header {
 
   .title-left {
     font-size: 16px;
+  }
+
+  .btn-2 span {
+    font-size: 3.5vw;
+    margin-top: 2px;
+  }
+  .product p {
+    margin: 0;
+    font-size: 12px;
   }
 }
 /* ----------message---------------- */
@@ -1078,18 +1102,18 @@ header {
 
 @media screen and (max-width: 405px){
   #p1{
-    font-size: 14px;
+    font-size: 16px;
     margin: 0;
   }
   
   #p2 {
-    font-size: 14px;
+    font-size: 16px;
     margin: 0 0 0 5px;
   }
   
   #p3 {
     text-align: right;
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 5px;
     font-weight: bold;
   }
@@ -1109,17 +1133,36 @@ header {
   }
 
 }
+@media screen and (max-width: 366px){
+  #p1{
+    font-size: 15px;
+    margin: 0;
+  }
+  
+  #p2 {
+    font-size: 15px;
+    margin: 0 0 0 5px;
+  }
+  
+  #p3 {
+    text-align: right;
+    font-size: 17px;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+}
 
 /* ---------------news--------------------- */
 #news {
   background-color: #18A0CB;
-  height: 800px;
+  height: auto;
+  padding-bottom: 50px;
 }
 
 #news-div {
   margin: 0 auto;
   width: 75vw;
-  height: 400px;
+  height: auto;
   background-color: #fff;
   text-align: center;
   padding-top: 50px;
@@ -1144,47 +1187,61 @@ header {
   margin: 0 auto;
 }
 
+.c-div {
+  width: 50%;
+  margin: 0 auto 0 0;
+  text-align: left;
+}
+
 .category dl {
-  display: flex;
-  justify-content: center;
   width: 100%;
+  margin-bottom: 40px;
+}
+
+.category dl dt{
+  display: flex;
+  width: fit-content;
 }
 
 .category-dd1 {
-  width: 40%;
-  margin-left: 0;
+  width: 60%;
+  margin: 0 auto 0 0;
+  font-size: 16px;
+  text-align: center;
 }
 
 .category-dd2 {
   width:100%;
-  text-align: left;
+  text-align: center;
   margin-left: 0;
 }
 
 .news {
-  color: #FF6F6F;
+  border: 1px solid #FF6F6F;
+  background-color: #FF6F6F;
+  color: #fff;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0 22px;
 }
 
 .event {
-  color: #16A30A;
+  border: 1px solid #16A30A;
+  background-color: #16A30A;
+  color: #fff;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 #news-btn {
   margin: 60px auto 50px auto;
 }
 
-.category-dd1 br {
-  display: none;
-    }
-
-@media screen and (max-width: 860px){
-#news {
-  height: 720px;
-  }
+@media screen and (max-width: 760px){
   
 #news-div {
   width: 75vw;
-  height: 380px;
   padding-top: 20px;
 }
 
@@ -1197,10 +1254,6 @@ header {
   font-size: 18px;
 }
 
-br {
-  display: inline;
-}
-
 #news-btn {
   margin: 80px auto 50px auto;
   width: 260px;
@@ -1208,6 +1261,54 @@ br {
   font-size: 24px;
   line-height: 60px;
   }
+
+  .c-div {
+    width: 40%;
+    margin: 0 auto 0 0;
+    text-align: left;
+  }
+
+
+  .news {
+    border: 1px solid #FF6F6F;
+    background-color: #FF6F6F;
+    color: #fff;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .event {
+    border: 1px solid #16A30A;
+    background-color: #16A30A;
+    color: #fff;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .category-dd1 {
+    width: 40%;
+    font-size: 14px;
+  }
+
+  .category-dd2 {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .category dl {
+    margin-bottom: 20px;
+  }
+
+  #news-btn {
+    margin: 50px auto 50px auto;
+    width: 200px;
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+  }
+
 }
 
 
