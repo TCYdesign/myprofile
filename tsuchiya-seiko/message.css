@@ -59,21 +59,8 @@ body {
     font-size: 4vw;
     margin-top: 5px;
   }
-  /* .title-left span{
-    display: block;
-  } */
-
 }
-/* @media screen and (max-width: 520px){
-  .main-pic-text h1 {
-    font-size: 5.5vw;
-  }
-  
-  .main-pic-text p{
-    font-weight: bold;
-    font-size: 3.5vw;
-  }
-} */
+
 /* -----------main-picここまで----------------- */
 /* ------------見出しここから-------------- */
 .main-title {
@@ -103,7 +90,7 @@ body {
 
 /* voice専用 */
 #voice-title {
-  background-color: rgba(94, 180, 234,0.8);
+  background-color: rgba(94, 180, 234,0.9);
   margin-bottom: 60px;
   padding: 30px 0;
 }
@@ -212,6 +199,8 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 60px;
+  padding: 20px;
+  box-sizing: border-box;
   width: 100%;
   background-color: rgba(255,255,255,0.8);
 }
@@ -261,14 +250,6 @@ body {
   width: 40%;
   padding-left: 50px;
 }
-
-/* #voice2-img {
-  order: 2;
-}
-
-#voice-left {
-  order: 1;
-} */
 
 /* 2番目社員ここまで */
 

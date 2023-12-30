@@ -700,85 +700,64 @@ header {
   color: #fff;
 }
 
-a.btn-flat {
-  overflow: hidden;
-  padding: 1.5rem 6rem;
-  color: #fff;
-  border-radius: 0;
-  background: #000;
+.btn-2-div {
+  margin: 20px 0;
 }
 
-.btn-2 a.btn-flat span {
-  position: relative;
-}
-
-
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
-}
-
-html {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
-
-
-a.btn-flat:before {
-  position: absolute;
-  top: 0;
-  left: 30px;
-  width: 150%;
-  height: 500%;
-  content: '';
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-  -webkit-transform: translateX(-98%) translateY(-70%) rotate(135deg);
-  transform: translateX(-98%) translateY(-70%) rotate(135deg);
-  background: #fff100;
-}
-
-a.btn-flat:hover:before {
-  -webkit-transform: translateX(-9%) translateY(-25%) rotate(135deg);
-  transform: translateX(-9%) translateY(-25%) rotate(135deg);
-}
-
-/* .btn-2 {
-  width: 300px;
-  height: 70px;
-  background-color: #ffffff;
-  border-top:5px solid #2d0fc4;
-  border-bottom: 5px solid #2d0fc4;
-  color: #343434;
+/* ----------------btn-2ここから--------------------------- */
+.btn-2{
+  font-size: 20px;
+  padding: 10px 30px;
+  width: 200px;
   font-weight: bold;
-  font-size: 30px;
-  text-align: center;
-  line-height: 70px;
-  margin: 0 auto 10px auto;
-  transform: skewX(10deg);
-  transform-origin: top right;
-}
-
-.btn-2:hover {
-  background-color: #262626;
-  
-}
-
-.btn-2:hover span {
-  color: #fff;
-}
-
-.btn-2 a {
+  position: relative;
+  overflow: hidden;
   text-decoration: none;
-  color: black;
+  display: inline-block;
+  border-top: 3px solid navy;
+  border-bottom: 5px solid navy;
+  border-right: 1px solid navy;
+  border-left: 1px solid navy;
+  background-color: #d1d9ff;
+  text-align: center;
+  outline: none;
+  transition: ease 1s;
+  box-shadow: 1px 3px rgba(66, 92, 135, 0.7);
+  border-radius: 10px;
 }
 
 .btn-2 span {
-  font-size: 24px;
-} */
+position: relative;
+z-index: 3;
+color:#030303;
+transition: all 0.3s ease;
+}
+
+.btn-2:hover span{
+color:#d1d9ff;
+}
+
+.bgskew::before {
+content: '';
+position: absolute;
+top: 0;
+left: -130%;
+background:navy;
+width:120%;
+height: 100%;
+transform: skewX(-40deg);
+}
+
+.bgskew:hover::before {
+animation: skewanime .5s forwards;
+}
+@keyframes skewanime {
+100% {
+  left:-10%;
+}
+}
+/* --------------btn-2ここまで-------------------------- */
+
 
 @media screen and (max-width: 1000px){
 
@@ -811,69 +790,61 @@ a.btn-flat:hover:before {
     margin: 0 auto;
   }
   
-  .btn-2 {
-    width: 50%;
-    height: 5vw;
-    background-color: #ffffff;
-    border-top:5px solid #2d0fc4;
-    border-bottom: 5px solid #2d0fc4;
-    color: #343434;
-    font-weight: bold;
-    text-align: center;
-    line-height: 5vw;
-    margin: 0 auto 10px auto;
-    transform: skewX(20deg);
-    transform-origin: top right;
-  }
-
-  .btn-2 span {
-    font-size: 20px;
-  }
-
   #product-div .product span {
     display: block;
   }
 }
 
-@media screen and (max-width: 580px){
+.btn-2{
+  font-size: 20px;
+  padding: 10px 30px;
+  width: 150px;
+}
+
+@media screen and (max-width: 650px){
   .product p {
     font-size: 14px;
   }
-  
 
+  .product {
+    width: 100%;
+    margin: 0 auto 20px auto;
+    object-fit: cover;
+  }
+
+  .product img {
+    width: 85%;
+    height: 230px;
+    padding: 10px 10px 0px 10px;
+    box-sizing: border-box;
+  }
+
+  .product p {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .btn-2-div {
+    margin: 5px 0 0 0;
+  }
+  
   .white-center {
     width: 20%;
     height: 2px;
   }
 
-  .product img {
-    width: 100%;
-    height: 30vw;
-    padding: 10px 10px 0px 10px;
-    box-sizing: border-box;
+  #product-div {
+    justify-content: unset;
+    flex-direction: column;
   }
 
-  .btn-2 {
-    width: 48%;
-    height: 5vw;
-    background-color: #ffffff;
-    border-top:5px solid #2d0fc4;
-    border-bottom: 5px solid #2d0fc4;
-    color: #343434;
-    font-weight: bold;
-    text-align: center;
-    line-height: 4.3vw;
-    margin: 0 auto 10px auto;
-    transform: skewX(20deg);
-    transform-origin: top right;
+  .btn-2{
+    font-size: 20px;
+    padding: 8px 15px;
+    width: 150px;
   }
-  
- .btn-2 span {
-    font-size: 3.5vw;
-    margin-top: 3px;
-  }
+
 }
-
 @media screen and (max-width: 430px){
   .white-center {
     width: 12%;
@@ -884,10 +855,6 @@ a.btn-flat:hover:before {
     font-size: 16px;
   }
 
-  .btn-2 span {
-    font-size: 3.5vw;
-    margin-top: 2px;
-  }
   .product p {
     margin: 0;
     font-size: 12px;

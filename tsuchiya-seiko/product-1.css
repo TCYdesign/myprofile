@@ -305,7 +305,7 @@ header {
     display: block;
   } 
   .product-div2 .label-right br {
-    display: none;
+    display: inline;
   }
   
   .img4-400 {
