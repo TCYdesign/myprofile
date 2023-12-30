@@ -437,12 +437,16 @@ iframe {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 98%;
+    margin: 0 ;
   }
   
   #footer-left {
-    max-width: 400px;
+    max-width: 100%;
     width: 100%;
-    margin: 0 0 0 80px;
+    margin: 0;
+    padding: 0 0 0 10%;
+    box-sizing: border-box;
   }
   
   #footer-right {
