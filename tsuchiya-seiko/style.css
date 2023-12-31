@@ -7,6 +7,7 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 /* -----------headerここから------------*/
 header {
@@ -165,18 +166,15 @@ header {
   /* ハンバーガー */
 .openbtn1{
   display: block;
-  position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+  position: relative;
   background:#262626;
-  cursor: pointer;
   width: 70px;
   height:100%;
-  border-radius: 5px;
 }
 
-/*ボタン内側*/
 .openbtn1 span{
     display: inline-block;
-    transition: all .4s;/*アニメーションの設定*/
+    transition: all .3s;
     position: absolute;
     left: 14px;
     height: 3px;
@@ -200,18 +198,17 @@ header {
 #menu-span {
   content:"Menu";
   display: inline-block;
-  transition: all .4s;
+  transition: all .3s;
   position: absolute;
   left: 10px;
   top: 38px;
   height: 0;
-  border-radius: 2px;
   color: #fff;
   width: 0;
   font-size: 14px;
 }
-/*activeクラスが付与されると線が回転して×に*/
 
+/*activeクラス*/
 .openbtn1.active span:nth-of-type(1) {
     top: 18px;
     left: 18px;
@@ -220,7 +217,7 @@ header {
 }
 
 .openbtn1.active span:nth-of-type(2) {
-  opacity: 0;/*真ん中の線は透過*/
+  opacity: 0;
 }
 
 .openbtn1.active span:nth-of-type(3){
@@ -228,21 +225,6 @@ header {
     left: 18px;
     transform: translateY(-6px) rotate(45deg);
     width: 30%;
-}
-/*========= レイアウトのためのCSS ===============*/
-
-a{
-  color: #333;
-  text-decoration: none;
-}
-
-.lead{
-  margin:20px 0 0 0;
-}
-
-.btn-block{
-  width:200px;  
-  padding: 30px;
 }
 }
 
@@ -286,6 +268,102 @@ a{
 }
 
 /* -----------headerここまで------------*/
+/* ハンバーガーメニューを開いた時の画面 */
+.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 960px){
+  .hamburger {
+    width: 100%;
+    height: auto;
+    background-color: #262626;
+    position: absolute;
+    z-index: 50;
+    right: 0;
+    display: block;
+    opacity: 0;
+    transition: all .1s linear;  
+  }
+
+  .hamu-open {
+    width: 100%;
+    height: 100vh;
+    background-color: #262626;
+    position: absolute;
+    z-index: 50;
+    right: 0;
+    display: block;
+    opacity: 0.98;
+    display: block;
+    transform: translateX(0);
+  }
+
+
+  #ham-div {
+    width: 100%;
+    margin: 0 0 0 auto;
+    display: flex;
+  }
+
+  #ham-ul {
+    list-style: none;
+    margin: 10% 0;
+    padding-inline-start:0px;
+  }
+
+  #ham-ul a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .ham-menu {
+    border-bottom: 1px dotted #fff;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .hamu-menu-top {
+    border-top: 1px dotted #fff;
+  }
+
+  .ham-menu a{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 60px;
+  }
+
+  .ham-menu a p{
+    margin: 0;
+    width: 50%;
+    color: #18A0CB;
+  }
+
+  .ham-menu a span {
+    font-size: 20px;
+    width: 50%;
+  }
+  
+  #ham-left {
+    width: 30%;
+    height: 100vh;
+  }
+
+  #ham-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #ham-right {
+    width: 70%;
+  }
+
+}
+
+/* ハンバーガーメニューを開いた時の画面ここまで */
+
 /* -----------main-picここから -------------*/
 .main-pic {
   position: relative;

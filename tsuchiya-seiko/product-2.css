@@ -161,15 +161,13 @@ header {
   display: block;
   position: relative;
   background:#262626;
-  cursor: pointer;
   width: 70px;
   height:100%;
-  border-radius: 5px;
 }
 
 .openbtn1 span{
     display: inline-block;
-    transition: all .4s;
+    transition: all .3s;
     position: absolute;
     left: 14px;
     height: 3px;
@@ -193,18 +191,17 @@ header {
 #menu-span {
   content:"Menu";
   display: inline-block;
-  transition: all .4s;
+  transition: all .3s;
   position: absolute;
   left: 10px;
   top: 38px;
   height: 0;
-  border-radius: 2px;
   color: #fff;
   width: 0;
   font-size: 14px;
 }
-/*activeクラスが付与されると線が回転して×に*/
 
+/*activeクラス*/
 .openbtn1.active span:nth-of-type(1) {
     top: 18px;
     left: 18px;
@@ -221,21 +218,6 @@ header {
     left: 18px;
     transform: translateY(-6px) rotate(45deg);
     width: 30%;
-}
-/*========= レイアウトのためのCSS ===============*/
-
-a{
-  color: #333;
-  text-decoration: none;
-}
-
-.lead{
-  margin:20px 0 0 0;
-}
-
-.btn-block{
-  width:200px;  
-  padding: 30px;
 }
 }
 
@@ -279,7 +261,100 @@ a{
 }
 
 /* -----------headerここまで------------*/
+/* ハンバーガーメニューを開いた時の画面 */
+.hamburger {
+  display: none;
+}
 
+@media screen and (max-width: 960px){
+  .hamburger {
+    width: 100%;
+    height: auto;
+    background-color: #262626;
+    position: absolute;
+    z-index: 50;
+    right: 0;
+    display: block;
+    opacity: 0;
+    transition: all .2s linear;
+  }
+
+  .hamu-open {
+    width: 100%;
+    height: 100vh;
+    background-color: #262626;
+    position: absolute;
+    z-index: 50;
+    right: 0;
+    display: block;
+    opacity: 0.98;
+    display: block;
+    transform: translateX(0);
+  }
+
+  #ham-div {
+    width: 100%;
+    margin: 0 0 0 auto;
+    display: flex;
+  }
+
+  #ham-ul {
+    list-style: none;
+    margin: 10% 0;
+    padding-inline-start:0px;
+  }
+
+  #ham-ul a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .ham-menu {
+    border-bottom: 1px dotted #fff;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .hamu-menu-top {
+    border-top: 1px dotted #fff;
+  }
+
+  .ham-menu a{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 60px;
+  }
+
+  .ham-menu a p{
+    margin: 0;
+    width: 50%;
+    color: #18A0CB;
+  }
+
+  .ham-menu a span {
+    font-size: 20px;
+    width: 50%;
+  }
+  
+  #ham-left {
+    width: 30%;
+    height: 100vh;
+  }
+
+  #ham-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #ham-right {
+    width: 70%;
+  }
+
+}
+
+/* ハンバーガーメニューを開いた時の画面ここまで */
 /* --------main-picここから------------ */
 .main-pic {
   position: relative;
@@ -766,3 +841,64 @@ iframe {
     width: 80%;
   }
   }
+
+   /* 下部ボタン */
+#btn-5 {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  font-size: 24px;
+  bottom: 0;
+}
+
+.btnlinestretches5{
+position:relative;
+color:#333;
+padding: 10px 0;
+display:inline-block;
+text-decoration: none;
+outline: none;
+}
+
+.btnlinestretches5::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #18A0CB;
+  border-radius: 10px;
+}
+
+/*矢印の設定*/
+.btnlinestretches5::after {
+  content: "";
+  position: absolute;
+  bottom:-5px;
+  width: 8px;
+  height: 8px;
+  border-top: 3px solid #18A0CB;
+  border-right: 3px solid #18A0CB;
+  transform: rotate(45deg);
+}
+
+.btnlinestretches5::before {
+  animation: arrowlong01 3s ease infinite;
+}
+.btnlinestretches5::after {
+  animation: arrowlong02 3s ease infinite;
+}
+
+@keyframes arrowlong01{
+  0%{width:0;opacity:0}
+  20%{width:0;opacity:1}
+  80%{width:105%;opacity:1}
+  100%{width:105%;opacity:0}
+}
+
+@keyframes arrowlong02{
+  0%{left:0;opacity:0}
+  20%{left:0;opacity:1}
+  80%{left:103%;opacity:1}
+  100%{left:103%;opacity:0}
+}
