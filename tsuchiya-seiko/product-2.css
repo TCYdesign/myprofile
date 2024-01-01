@@ -1,5 +1,5 @@
 body {
-  margin: 1px 0 0;
+  margin: 0;
   font-family: 'Noto Sans Japanese','Hiragino Kaku Gothic ProN','Meiryo',sans-serif;
 }
 
@@ -220,6 +220,7 @@ header {
     transform: translateY(-6px) rotate(45deg);
     width: 30%;
 }
+
 }
 
 @media screen and (max-width: 480px){
@@ -230,41 +231,6 @@ header {
   #header-left h1 {
     font-size: 18px;
   }
-
-  #header-right {
-    width: 20%;
-  }
-
-  #header-left h1 {
-    font-size: 18px;
-  }
-
-  
-.openbtn1 span:nth-of-type(1) {
-  top:13px; 
-}
-
-.openbtn1 span:nth-of-type(2) {
-  top:21px;
-}
-
-.openbtn1 span:nth-of-type(3) {
-  top:29px;
-}
-
-#menu-span {
-  content:"Menu";
-  display: inline-block;
-  transition: all .3s;
-  position: absolute;
-  left: 10px;
-  top: 30px;
-  height: 0;
-  color: #fff;
-  width: 0;
-  font-size: 14px;
-}
-
 }
 
 @media screen and (max-width: 380px){
@@ -279,7 +245,7 @@ header {
   }
 
   .openbtn1 {
-    height: 125%;
+    height: 120%;
   }
   .openbtn1 span:nth-of-type(3)::after {
     font-size: 1rem;
