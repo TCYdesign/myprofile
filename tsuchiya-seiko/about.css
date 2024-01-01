@@ -1,5 +1,6 @@
 body{
   margin: 0;
+  font-family: 'Noto Sans Japanese','Hiragino Kaku Gothic ProN','Meiryo',sans-serif;
 }
 /* -----------headerここから------------*/
 header {
@@ -276,11 +277,12 @@ header {
     display: block;
     opacity: 0;
     transition: all .2s linear;
+    display: none;
   }
 
   .hamu-open {
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     background-color: #262626;
     position: absolute;
     z-index: 50;
@@ -338,7 +340,7 @@ header {
   
   #ham-left {
     width: 30%;
-    height: 100vh;
+    height: 100dvh;
   }
 
   #ham-left img {
@@ -361,7 +363,7 @@ header {
 
 #main-pic {
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   object-fit: cover;
   object-position: top;
 }
@@ -485,7 +487,7 @@ header {
 
 #about3 img{
   position: absolute;
-  top: 100vh;
+  top: 100dvh;
   left: 0vw;
   height: 45vh;
   object-fit: cover;
@@ -607,7 +609,7 @@ header {
   
   #about3 img{
     position: absolute;
-    top: 100vh;
+    top: 100dvh;
     left: 0vw;
     height: 40vh;
     object-fit: cover;
@@ -1365,6 +1367,8 @@ header {
   #enkaku dt {
     float: none;
     color: #1d2776;
+    width: 95%;
+    margin: 0 auto;
   }
 
   #enkaku dd {

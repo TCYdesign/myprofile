@@ -1,6 +1,7 @@
 body {
   margin: 0;
   overflow-x: hidden;
+  font-family: 'Noto Sans Japanese','Hiragino Kaku Gothic ProN','Meiryo',sans-serif;
 }
 
 /* -----------headerここから------------*/
@@ -278,11 +279,12 @@ header {
     display: block;
     opacity: 0;
     transition: all .2s linear;
+    display: none;
   }
 
   .hamu-open {
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     background-color: #262626;
     position: absolute;
     z-index: 50;
@@ -340,7 +342,7 @@ header {
   
   #ham-left {
     width: 30%;
-    height: 100vh;
+    height: 100dvh;
   }
 
   #ham-left img {
@@ -404,6 +406,11 @@ header {
     width: 25%;
     height: 2px;
     margin-right: 5%;
+  }
+
+  .main-title {
+    position: relative;
+    background-color: #fff;
   }
 }
 /* -------タイトルここまで--------------- */

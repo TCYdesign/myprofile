@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: 'Noto Sans Japanese','Hiragino Kaku Gothic ProN','Meiryo',sans-serif;
 }
 
 article {
@@ -279,12 +280,13 @@ header {
     right: 0;
     display: block;
     opacity: 0;
-    transition: all .2s linear;
+    transition: all .3s linear;
+    display: none;
   }
 
   .hamu-open {
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     background-color: #262626;
     position: absolute;
     z-index: 50;
@@ -292,7 +294,6 @@ header {
     display: block;
     opacity: 0.98;
     display: block;
-    transform: translateX(0);
   }
 
   #ham-div {
@@ -342,7 +343,7 @@ header {
   
   #ham-left {
     width: 30%;
-    height: 100vh;
+    height: 100dvh;
   }
 
   #ham-left img {
@@ -523,6 +524,7 @@ header {
     height: 80px;
     line-height: 80px;
     margin-bottom: 0;
+    position: relative;
   }
 
   .gray-back h1 {
