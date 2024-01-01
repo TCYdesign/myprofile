@@ -289,7 +289,7 @@ header {
 
   .hamu-open {
     width: 100%;
-    height: 90dvh;
+    height: calc(100dvh - 48px);
     background-color: #262626;
     position: absolute;
     z-index: 50;
@@ -348,7 +348,7 @@ header {
   
   #ham-left {
     width: 30%;
-    height: 90dvh;
+    height: calc(100dvh - 48px);
   }
 
   #ham-left img {
@@ -372,7 +372,7 @@ header {
 
 .main-pic img {
   width: 100%;
-  height: 90dvh;
+  height: calc(100dvh - 48px);
   object-fit: cover;
   object-position: top;
 }
