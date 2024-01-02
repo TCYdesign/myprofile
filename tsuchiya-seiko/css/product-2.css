@@ -444,7 +444,7 @@ section span {
 section {
   width: 100%;
   height: 2000px;
-  background-image: url(img/product-2/background-img.jpg);
+  background-image: url(../img/product-2/background-img.jpg);
 }
 
 .p-div {
@@ -904,4 +904,16 @@ outline: none;
   20%{left:0;opacity:1}
   80%{left:103%;opacity:1}
   100%{left:103%;opacity:0}
+}
+
+/* ----jq--------- */
+.p01,.p02,.p03,.p04,.p05 {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 2s;
+}
+
+.p-div-fadein {
+  opacity: 1;
+  transform: translateY(0);
 }

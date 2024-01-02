@@ -457,6 +457,7 @@ header {
   right: 0;
   width: 65%;
   text-align: center;
+  z-index: 10;
 }
 
 .label-right h2 {
@@ -839,3 +840,32 @@ iframe {
     80%{left:103%;opacity:1}
     100%{left:103%;opacity:0}
 }
+
+/* --------jquery--------------- */
+.img01,.img03 {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: 2s;
+}
+
+.img02,.img04 {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: 2s;
+}
+
+.img-fadein {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: -5;
+  position: relative;
+}
+
+.img-fadein-gray {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 0;
+  position: relative;
+}
+
+

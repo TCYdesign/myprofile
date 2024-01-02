@@ -1,12 +1,6 @@
 
 $(function(){
 
-  window.onload = funtion(){
-    setTimeout(function(){
-      window.scrollTo(0,1);
-    }, 1);
-  }
-
 // ハンバーガーメニュー
 $(".openbtn1").click(function () {
   $(this).toggleClass('active');
@@ -160,7 +154,7 @@ $(window).scroll(function () {
   const windowHeight = $(window).height();
   $('.img-wrap-none').each(function () {
     const position = $(this).offset().top;
-    if (scrollAmount > position - windowHeight + 150) {
+    if (scrollAmount > position - windowHeight + 110) {
       $(this).addClass('img-wrap');
     }else {
       $(".img-wrap-none").removeClass("img-wrap");
