@@ -1,6 +1,12 @@
 
 $(function(){
 
+  window.onload = funtion(){
+    setTimeout(function(){
+      window.scrollTo(0,1);
+    }, 1);
+  }
+
 // ハンバーガーメニュー
 $(".openbtn1").click(function () {
   $(this).toggleClass('active');
