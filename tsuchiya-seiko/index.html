@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>土屋製工 株式会社</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <!-- headerここから -->
@@ -143,7 +143,9 @@
   </div>
   <main>
     <div class="main-pic">
-      <img src="img/index/main-pic.jpg" alt="メイン画像">
+      <div id="main-pic-div">
+      <img  src="img/index/main-pic.jpg" alt="メイン画像">
+      </div>
       <div class="main-pic-line">
         <div class="main-pic-text">
           <h1>人と大地を基に未来へ挑戦</h1>
@@ -157,7 +159,7 @@
     <article>
       <section>
         <div id="about">
-          <div class="main-title">
+          <div class="main-title main-fadeout">
             <span class="title-left">土屋製工について</span>
             <span class="title-center"></span>
             <h2 class="title-right">ABOUT</h2>
@@ -166,50 +168,54 @@
     <!--タイトルここまで-->
       <div id="about-div" class="wrapper-1500">
       <div id="about1">
-        <img src="img/index/about1.jpg" alt="トラック">
-        <div id="about-text1" class="about-text">
+        <img class="left" src="img/index/about1.jpg" alt="トラック">
+        <div id="about-text1" class="about-text right">
           <h3>生産方針</h3>
           <p>品質・納期・コストを意識し、安定した生産と品質向上のため<br>改善活動を実施しお客様に満足いただけるものづくりを行います。</p>
         </div>
       </div>
       <div id="about2">
-        <div id="about-text2" class="about-text">
+        <div id="about-text2" class="about-text right-2">
           <h3>安全職場・健康職場</h3>
           <p>安全と健康に配慮した職場環境づくりと社内教育を推進します。
             <br>子育て・介護などライフスタイルバランスが取れた働き方が<br>出来るよう取り組みます。</p>
         </div>
-        <img src="img/index/about2.jpg" alt="職場環境">
+        <img class="left-2" src="img/index/about2.jpg" alt="職場環境">
       </div>
       <div id="about3">
-        <img src="img/index/about3.jpg" alt="トラック">
-        <div id="about-text3" class="about-text">
+        <img class="left-3" src="img/index/about3.jpg" alt="トラック">
+        <div id="about-text3" class="about-text right-3">
           <h3>環境方針</h3>
           <p>信州の美しい自然を後世に残すため環境保全の重要性を認識し<br>法令の遵守・社会に配慮した生産活動を行います。</p>
         </div>
       </div>
       </div>
-      <div class="btn-1">
+      <div class="btn-1 btn-1-fadeout">
         <a href="about.html"><p>会社概要ページへ</p></a>
       </div>
       </section>
       <!-- PRODUCT -->
       <section>
         <div id="product">
-          <div class="main-title">
+          <div class="main-title main-fadeout2">
             <span class="title-left title-white">製品・加工</span>
             <span class="white-center"></span>
             <h2 class="title-right title-white">PRODUCT</h2>
           </div>
           <div id="product-div" class="wrapper">
             <div class="product">
+              <div class="img-wrap-none">
               <img src="img/index/product1.jpg" alt="スノーマシン">
+              </div>
               <div class="btn-2-div">
                 <a href="product-1.html" class="btn-2 bgskew"><span>製品一覧</span></a>
               </div>
               <p>伝票１枚で設計→部品製作<span>→完成品納入まで対応します</span></p>
             </div>
             <div class="product">
+              <div class="img-wrap-none">
               <img src="img/index/product2.jpg" alt="溶接">
+              </div>
               <div class="btn-2-div">
                 <a href="product-2.html" class="btn-2 bgskew"><span>加工工程</span></a>
               </div>
@@ -221,7 +227,7 @@
       <!-- MESSAGE -->
       <section>
         <div id="message">
-          <div class="main-title">
+          <div class="main-title main-fadeout3">
             <span class="title-left">代表挨拶</span>
             <span class="title-center"></span>
             <h2 class="title-right">MESSAGE</h2>
@@ -244,7 +250,7 @@
       </section>
       <section>
         <div id="news">
-          <div class="main-title">
+          <div class="main-title main-fadeout4">
             <span class="title-left title-white">新着情報</span>
             <span class="white-center"></span>
             <h2 class="title-right title-white">NEWS</h2>
@@ -280,7 +286,7 @@
                 <dd class="category-dd2">テキストテキストテキスト</dd>
               </dl>
             </div>
-            <div class="btn-1" id="news-btn">
+            <div class="btn-1 btn-1-fadeout2" id="news-btn">
               <a href="news.html"><p>新着情報一覧</p></a>
             </div>
           </div>
@@ -292,7 +298,7 @@
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
   crossorigin="anonymous"></script>
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 <footer>
   <div id="footer-flex" class="wrapper">
