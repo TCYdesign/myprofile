@@ -7,6 +7,8 @@ body {
 header {
   display: flex;
   justify-content: space-between;
+  position: relative;
+  z-index: 100;
 }
 
 #header-left {
@@ -395,12 +397,12 @@ header {
   font-size: 8vw;
   margin-top : 1rem;
   margin-bottom: 1rem;
-  color: #B9B9B9;
+  color: #ffffff;
 }
 
 
 .title-white {
-  color: #fff;
+  color: #262626;
   margin-top: 50px;
 }
 
@@ -433,7 +435,7 @@ header {
 
 /* ---------------news--------------------- */
 #news {
-  background-color: #18A0CB;
+  background-color: #B9B9B9;
   height: auto;
   padding-bottom: 50px;
 }
@@ -442,9 +444,10 @@ header {
   margin: 0 auto;
   width: 75vw;
   height: auto;
-  background-color: #fff;
+  background-color: #ffffff;
   text-align: center;
   padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 #news-div a {
@@ -496,18 +499,18 @@ header {
 }
 
 .news {
-  border: 1px solid #FF6F6F;
-  background-color: #FF6F6F;
-  color: #fff;
+  /* border: 1px solid #FF6F6F; */
+  background-color: #262626;
+  color: #FF6F6F;
   width: fit-content;
   margin: 0 auto;
-  padding: 0 22px;
+  padding: 0 10px;
 }
 
 .event {
-  border: 1px solid #16A30A;
-  background-color: #16A30A;
-  color: #fff;
+  /* border: 1px solid #16A30A; */
+  background-color: #262626;
+  color: #16A30A;
   width: fit-content;
   margin: 0 auto;
   padding: 0 10px;

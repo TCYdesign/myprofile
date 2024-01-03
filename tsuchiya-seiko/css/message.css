@@ -7,6 +7,8 @@ body {
 header {
   display: flex;
   justify-content: space-between;
+  position: relative;
+  z-index: 100;
 }
 
 #header-left {
@@ -905,7 +907,7 @@ iframe {
 
   .message-pic-fadeout {
     opacity: 0;
-    transition: 2s;
+    transition: 3s;
   }
 
   .message-pic-fadein {

@@ -32,20 +32,22 @@ $(function () {
     }
   });
 
+  $('.message-pic-fadeout').each(function () {
+    const position = $(this).offset().top;
+    if (scrollAmount > position - windowHeight) {
+    $(this).addClass('message-pic-fadein');
+   }else {
+      $(".message-pic-fadeout").removeClass("message-pic-fadein");
+   }
+ });
+
 });
 
 
 $(window).scroll(function () {
   const scrollAmount = $(window).scrollTop();
   const windowHeight = $(window).height();
-  $('.message-pic-fadeout').each(function () {
-    const position = $(this).offset().top;
-    if (scrollAmount > position - windowHeight + 100) {
-    $(this).addClass('message-pic-fadein');
-   }else {
-      $(".message-pic-fadeout").removeClass("message-pic-fadein");
-   }
- });
+
  $('.voicetitle-fadeout').each(function () {
   const position = $(this).offset().top;
   if (scrollAmount > position - windowHeight + 100) {
