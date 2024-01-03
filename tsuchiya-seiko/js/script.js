@@ -154,7 +154,7 @@ $(window).scroll(function () {
   const windowHeight = $(window).height();
   $('.img-wrap-none').each(function () {
     const position = $(this).offset().top;
-    if (scrollAmount > position - windowHeight + 110) {
+    if (scrollAmount > position - windowHeight + 100) {
       $(this).addClass('img-wrap');
     }else {
       $(".img-wrap-none").removeClass("img-wrap");

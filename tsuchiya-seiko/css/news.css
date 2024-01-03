@@ -380,6 +380,12 @@ header {
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0px 0 50px 0;
+}
+
+.main-title h2 {
+  margin: 0;
 }
 
 
@@ -409,7 +415,7 @@ header {
 .white-center {
   width: 30%;
   height: 3px;
-  background-color: #000;
+  background-color: #262626;
   margin-top: 50px;
 }
 
@@ -435,9 +441,12 @@ header {
 
 /* ---------------news--------------------- */
 #news {
-  background-color: #B9B9B9;
+  background-image: url(../img/news/news-background.jpg);
+  background-attachment: fixed;
+  background-position: center;
   height: auto;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
+  padding-top: 60px;
 }
 
 #news-div {
@@ -448,6 +457,7 @@ header {
   text-align: center;
   padding-top: 50px;
   padding-bottom: 50px;
+  padding-right: 90px;
 }
 
 #news-div a {
@@ -459,6 +469,43 @@ header {
   margin-top: 0;
   font-size: 34px;
 }
+
+/* news写真導入部分 */
+.news-dl-div {
+  display: flex;
+  align-items: center;
+}
+
+.news-img {
+  order: 2;
+  width: 30%;
+}
+
+.news-img img {
+  width: 100%;
+}
+
+.news-dl-div dl{
+  order: 1;
+}
+@media screen and (max-width: 760px){
+  .news-dl-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .news-img {
+    order: 2;
+    width: 50%;
+  }
+
+  #news-div {
+    padding-right: 0;
+  }
+}
+
+/* news写真導入部分ここまで */
 
 .category {
   font-size: 20px;
@@ -518,6 +565,10 @@ header {
 
 @media screen and (max-width: 760px){
   
+#news {
+  padding-top: 20px;
+}
+
 #news-div {
   width: 75vw;
   padding-top: 20px;
@@ -538,25 +589,6 @@ header {
     text-align: left;
   }
 
-
-  .news {
-    border: 1px solid #FF6F6F;
-    background-color: #FF6F6F;
-    color: #fff;
-    width: fit-content;
-    margin: 0 auto;
-    padding: 0 10px;
-  }
-
-  .event {
-    border: 1px solid #16A30A;
-    background-color: #16A30A;
-    color: #fff;
-    width: fit-content;
-    margin: 0 auto;
-    padding: 0 10px;
-  }
-
   .category-dd1 {
     width: 50%;
     font-size: 14px;
@@ -569,6 +601,24 @@ header {
 
   .category dl {
     margin-bottom: 20px;
+  }
+
+  .title-white {
+    margin-top: 0;
+  }
+
+  .white-center {
+    margin-top: 0;
+
+  }
+}
+@media screen and (max-width: 520px){
+  .category dl dt {
+    margin-left: 0;
+  }
+
+  .category-dd1 {
+    text-align: left;
   }
 
 }
