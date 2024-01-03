@@ -1,4 +1,3 @@
-
 $(function(){
 
 // ハンバーガーメニュー
@@ -12,7 +11,7 @@ $(".openbtn1").click(function(){
 });
 
 // タイトルスライドイン（main-title）
-$(window).scroll(function () {
+$(function () {
   const scrollAmount = $(window).scrollTop();
   const windowHeight = $(window).height();
   $('.main-fadeout').each(function () {
@@ -23,117 +22,66 @@ $(window).scroll(function () {
       $(".main-fadeout").removeClass("main-fadein");
     }
   });
+
+  $('.fv-fadeout').each(function () {
+     const position = $(this).offset().top;
+     if (scrollAmount > position - windowHeight + 100) {
+     $(this).addClass('fv-fadein');
+    }else {
+       $(".fv-fadeout").removeClass("fv-fadein");
+    }
+  });
+
 });
 
 
-// ABOUTの画像とテキストフェードイン
 $(window).scroll(function () {
   const scrollAmount = $(window).scrollTop();
   const windowHeight = $(window).height();
-  // 1行目
-  $('.right').each(function () {
+  $('.message-pic-fadeout').each(function () {
     const position = $(this).offset().top;
     if (scrollAmount > position - windowHeight + 100) {
-      $(this).addClass('fadein-right');
-    }else {
-      $(".right").removeClass("fadein-right");
-    }
-  });
-  $('.left').each(function () {
-    const position = $(this).offset().top;
-    if (scrollAmount > position - windowHeight + 100) {
-      $(this).addClass('fadein-left');
-    }else {
-      $(".left").removeClass("fadein-left");
-    }
-  });
-  // 2行目
-  $('.right-2').each(function () {
-    const position = $(this).offset().top;
-    if (scrollAmount > position - windowHeight + 100) {
-      $(this).addClass('fadein-right');
-    }else {
-      $(".right-2").removeClass("fadein-right");
-    }
-  });
-  $('.left-2').each(function () {
-    const position = $(this).offset().top;
-    if (scrollAmount > position - windowHeight + 100) {
-      $(this).addClass('fadein-left');
-    }else {
-      $(".left-2").removeClass("fadein-left");
-    }
-  });
-  // 3行目
-  $('.right-3').each(function () {
-    const position = $(this).offset().top;
-    if (scrollAmount > position - windowHeight + 100) {
-      $(this).addClass('fadein-right');
-    }else {
-      $(".right-3").removeClass("fadein-right");
-    }
-  });
-  $('.left-3').each(function () {
-    const position = $(this).offset().top;
-    if (scrollAmount > position - windowHeight + 100) {
-      $(this).addClass('fadein-left');
-    }else {
-      $(".left-3").removeClass("fadein-left");
-    }
-  });
-  // 青背景部分(blue-back)
-  $('.blue1').each(function () {
-    const position = $(this).offset().top;
-    if (scrollAmount > position - windowHeight + 100) {
-      $('.blue1').addClass('fadein');
-    }else {
-      $(".blue1").removeClass("fadein");
-    }
-    if(scrollAmount > position - windowHeight + 150){
-      $('.blue2').addClass('fadein');
-    }else {
-      $(".blue2").removeClass("fadein");
-    }
-    if(scrollAmount > position - windowHeight + 200){
-      $('.blue3').addClass('fadein');
-    }else {
-      $(".blue3").removeClass("fadein");
-    }
-    // 会社概要・沿革タイトル
-    if(scrollAmount > position - windowHeight + 300){
-      $('.h5-fadeout').addClass('fadein');
-    }else {
-      $(".h5-fadeout").removeClass("fadein");
-    }
-    if(scrollAmount > position - windowHeight + 1500){
-      $('.h5-fadeout2').addClass('fadein');
-    }else {
-      $(".h5-fadeout2").removeClass("fadein");
-    }
-    // 主要銀行・取引先
-    if(scrollAmount > position - windowHeight + 1100){
-      $('.A8C0D1').addClass('fadein');
-    }else {
-      $(".A8C0D1").removeClass("fadein");
-    }
-  });
-  // 会社概要写真・スライドイン
-  $('.about-pic-fadeout').each(function () {
-    const position = $(this).offset().top;
-    if (scrollAmount > position - windowHeight + 100) {
-      $(this).addClass('about-pic-fadein');
-    }else {
-      $(".about-pic-fadeout").removeClass("about-pic-fadein");
-    }
-  });
-  $('.about-pic-fadeout2').each(function () {
-    const position = $(this).offset().top;
-    if (scrollAmount > position - windowHeight + 100) {
-      $(this).addClass('about-pic-fadein2');
-    }else {
-      $(".about-pic-fadeout2").removeClass("about-pic-fadein2");
-    }
-  });
+    $(this).addClass('message-pic-fadein');
+   }else {
+      $(".message-pic-fadeout").removeClass("message-pic-fadein");
+   }
+ });
+ $('.voicetitle-fadeout').each(function () {
+  const position = $(this).offset().top;
+  if (scrollAmount > position - windowHeight + 100) {
+  $(this).addClass('voicetitle-fadein');
+ }else {
+    $(".voicetitle-fadeout").removeClass("voicetitle-fadein");
+ }
 });
+// 社員１～３
+$('.voice-1-fadeout').each(function () {
+  const position = $(this).offset().top;
+  if (scrollAmount > position - windowHeight + 100) {
+  $(this).addClass('voice-1-fadein');
+ }else {
+    $(".voice-1-fadeout").removeClass("voice-1-fadein");
+ }
+});
+$('.voice-2-fadeout').each(function () {
+  const position = $(this).offset().top;
+  if (scrollAmount > position - windowHeight + 150) {
+  $(this).addClass('voice-2-fadein');
+ }else {
+    $(".voice-2-fadeout").removeClass("voice-2-fadein");
+ }
+});
+$('.voice-3-fadeout').each(function () {
+  const position = $(this).offset().top;
+  if (scrollAmount > position - windowHeight + 100) {
+  $(this).addClass('voice-3-fadein');
+ }else {
+    $(".voice-3-fadeout").removeClass("voice-3-fadein");
+ }
+});
+
+
+});
+
 // ----------fadinここまで--------------------
 });

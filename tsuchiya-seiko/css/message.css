@@ -427,6 +427,7 @@ header {
   width: 100%;
 }
 
+
 .title-left {
   font-size: 2vw; 
 }
@@ -875,4 +876,75 @@ iframe {
   iframe {
     width: 80%;
   }
+  }
+
+  /* ---------jq------------ */
+  .fv-fadeout {
+    opacity: 0;
+    transition: 1.5s;
+    transform: translateX(-100px);
+  }
+
+  
+  .fv-fadein {
+    opacity: 1;
+    transform: translate(0);
+  }
+
+
+  .main-fadeout {
+    opacity: 0;
+    transition: 2.5s;
+    transform: translateX(-100px);
+  }
+  
+  .main-fadein {
+    opacity: 1;
+    transform: translate(0);
+  }
+
+  .message-pic-fadeout {
+    opacity: 0;
+    transition: 2s;
+  }
+
+  .message-pic-fadein {
+    opacity: 1;
+  }
+
+  .voicetitle-fadeout {
+    opacity: 0;
+    transition: 1.5s;
+    transform: translateX(-100px);
+  }
+
+  .voicetitle-fadein {
+      opacity: 1;
+      transform: translate(0);
+  }
+/* 社員３人 */
+  .voice-1-fadeout,.voice-3-fadeout {
+    opacity: 0;
+    transition: 1.5s;
+    transform: translateX(10%);
+  }
+
+  .voice-1-fadein,.voice-3-fadein {
+    opacity: 1;
+    transform:translateX(0%) ;
+  }
+
+  .voice-2-fadeout {
+    opacity: 0;
+    transition: 1.5s;
+    transform: translate(10%);
+  }
+
+  .voice-2-fadein {
+    opacity: 1;
+    transform:translateX(0) ;
+  }
+
+  #voice {
+    overflow: auto;
   }
