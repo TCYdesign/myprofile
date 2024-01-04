@@ -159,7 +159,7 @@ header {
   }
 
   #header-right {
-    width: 30%;
+    width: 70px;
     justify-content: right;
     height: 60px;
   }
@@ -229,44 +229,19 @@ header {
 }
 }
 
-@media screen and (max-width: 480px){
-  #header-right {
-    width: 20%;
+@media screen and (max-width: 420px){
+  #header-left h1 {
+    font-size: 17px;
   }
 
-  #header-left h1 {
-    font-size: 18px;
-  }
 }
 
-@media screen and (max-width: 380px){
-  #header-right {
-    width: 15%;
-    background-color: #262626;
-    height: auto;
-  }
-
+@media screen and (max-width: 356px){
   #header-left h1 {
     font-size: 15px;
   }
-
-  .openbtn1 {
-    height: 120%;
-  }
-  .openbtn1 span:nth-of-type(3)::after {
-    font-size: 1rem;
-    left: -3px;
-  }
-
-  #menu-span {
-    content:"Menu";
-    display: inline-block;
-    transition: all .4s;
-    font-size: 12px;
-    top: 34px;
-    left: 11px;
-  }
 }
+
 
 /* -----------headerここまで------------*/
 /* ハンバーガーメニューを開いた時の画面 */
@@ -282,14 +257,15 @@ header {
     position: absolute;
     z-index: 50;
     right: 0;
-    display: none;
+    display: block;
     opacity: 0;
-    transition: all .1s linear;  
+    transition: all .2s linear;
+    display: none;
   }
 
   .hamu-open {
     width: 100%;
-    height: calc(100dvh - 48px);
+    height: 100dvh;
     background-color: #262626;
     position: absolute;
     z-index: 50;
@@ -299,7 +275,6 @@ header {
     display: block;
     transform: translateX(0);
   }
-
 
   #ham-div {
     width: 100%;
@@ -348,7 +323,7 @@ header {
   
   #ham-left {
     width: 30%;
-    height: calc(100dvh - 48px);
+    height: 100dvh;
   }
 
   #ham-left img {
@@ -364,7 +339,6 @@ header {
 }
 
 /* ハンバーガーメニューを開いた時の画面ここまで */
-
 /* -----------main-picここから -------------*/
 .main-pic {
   position: relative;
@@ -1794,6 +1768,21 @@ iframe {
   }
 
   /* ----------jquery用--------------- */
+  .main-fadeout-h1 {
+    opacity: 0;
+    transition: 2s;
+  }
+
+  .main-fadeout-p {
+    opacity: 0;
+    transition: 2.5s;
+  }
+
+  .main-fadein-h1-p {
+    opacity: 1;
+  }
+
+
   .main-fadeout,.main-fadeout3 {
     opacity: 0;
     transition: 1.2S;

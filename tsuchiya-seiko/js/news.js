@@ -11,19 +11,10 @@ $(".openbtn1").click(function(){
   $('.hamburger').toggleClass('hamu-open');
 });
 
-// タイトルスライドイン（main-title）
-$(window).scroll(function () {
-  const scrollAmount = $(window).scrollTop();
-  const windowHeight = $(window).height();
-  $('.main-fadeout').each(function () {
-    const position = $(this).offset().top;
-    if (scrollAmount > position - windowHeight + 100) {
-      $(this).addClass('main-fadein');
-    }else {
-      $(".main-fadeout").removeClass("main-fadein");
-    }
+// main-fadein
+$(function(){
+  $('.main-fadeout').addClass('main-fadein');
   });
-});
 
 
 // ABOUTの画像とテキストフェードイン

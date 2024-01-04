@@ -10,12 +10,23 @@ $(".openbtn1").click(function(){
   $('.hamburger').toggleClass('hamu-open');
 });
 
+// main-fadein
+$(function(){
+  $('.main-slide-h1').addClass('main-slidein');
+  $('.main-slide-p').addClass('main-slidein');
+  });
+
 // 画像のフェードイン
 $(window).scroll(function () {
   const scrollAmount = $(window).scrollTop();
   const windowHeight = $(window).height();
   $('.p01').each(function () {
     const position = $(this).offset().top;
+    if (scrollAmount > position - windowHeight) {
+      $('.main-line-fadeout').addClass('main-line-fadein');
+    }else {
+      $(".main-line-fadeout").removeClass("main-line-fadein");
+    }
     if (scrollAmount > position - windowHeight + 100) {
       $(this).addClass('p-div-fadein');
     }else {

@@ -155,7 +155,7 @@ header {
   }
 
   #header-right {
-    width: 30%;
+    width: 70px;
     justify-content: right;
     height: 60px;
   }
@@ -225,44 +225,19 @@ header {
 }
 }
 
-@media screen and (max-width: 480px){
-  #header-right {
-    width: 20%;
+@media screen and (max-width: 420px){
+  #header-left h1 {
+    font-size: 17px;
   }
 
-  #header-left h1 {
-    font-size: 18px;
-  }
 }
 
-@media screen and (max-width: 380px){
-  #header-right {
-    width: 15%;
-    background-color: #262626;
-    height: auto;
-  }
-
+@media screen and (max-width: 356px){
   #header-left h1 {
     font-size: 15px;
   }
-
-  .openbtn1 {
-    height: 120%;
-  }
-  .openbtn1 span:nth-of-type(3)::after {
-    font-size: 1rem;
-    left: -3px;
-  }
-
-  #menu-span {
-    content:"Menu";
-    display: inline-block;
-    transition: all .4s;
-    font-size: 12px;
-    top: 34px;
-    left: 11px;
-  }
 }
+
 
 /* -----------headerここまで------------*/
 /* ハンバーガーメニューを開いた時の画面 */
@@ -280,7 +255,7 @@ header {
     right: 0;
     display: block;
     opacity: 0;
-    transition: all .3s linear;
+    transition: all .2s linear;
     display: none;
   }
 
@@ -294,6 +269,7 @@ header {
     display: block;
     opacity: 0.98;
     display: block;
+    transform: translateX(0);
   }
 
   #ham-div {
@@ -366,6 +342,7 @@ header {
   line-height: 100px;
   background-color: #f1f1f1;
   margin-bottom: 50px;
+  position: relative;
 }
 
 .gray-back h1 {

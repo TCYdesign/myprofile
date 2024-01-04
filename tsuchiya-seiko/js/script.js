@@ -11,6 +11,13 @@ $(".openbtn1").click(function(){
   $('.hamburger').toggleClass('hamu-open');
 });
 
+// main-fadein
+$(function(){
+  $('.main-fadeout-h1').addClass('main-fadein-h1-p');
+  $('.main-fadeout-p').addClass('main-fadein-h1-p');
+  });
+
+
 // タイトルスライドイン（main-title）
 $(window).scroll(function () {
   const scrollAmount = $(window).scrollTop();
