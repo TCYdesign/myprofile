@@ -243,6 +243,9 @@ header {
 }
 
 @media screen and (max-width: 960px){
+  .ham-menu br {
+    display: inline-block;
+  }
   .hamburger {
     width: 100%;
     height: auto;
