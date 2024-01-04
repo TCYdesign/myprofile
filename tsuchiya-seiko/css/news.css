@@ -445,6 +445,7 @@ header {
 #news-div h3 {
   margin-top: 0;
   font-size: 34px;
+  display: none;
 }
 
 /* news写真導入部分 */
@@ -524,7 +525,7 @@ header {
 
 .news {
   /* border: 1px solid #FF6F6F; */
-  background-color: #262626;
+  background-color: #565656;
   color: #FF6F6F;
   width: fit-content;
   margin: 0 auto;
@@ -533,7 +534,7 @@ header {
 
 .event {
   /* border: 1px solid #16A30A; */
-  background-color: #262626;
+  background-color: #565656;
   color: #16A30A;
   width: fit-content;
   margin: 0 auto;
@@ -591,7 +592,7 @@ header {
 }
 @media screen and (max-width: 520px){
   .category dl dt {
-    margin-left: 0;
+    margin-left: 2%;
   }
 
   .category-dd1 {
@@ -795,6 +796,10 @@ iframe {
   }
   }
   /* --------jq---------- */
+  .body-overflow {
+    overflow-y: hidden;
+  }
+
   .main-fadeout {
     opacity: 0;
     transform: translateX(-100px);

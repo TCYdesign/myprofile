@@ -9,6 +9,7 @@ $(".openbtn1").click(function () {
 // ハンバーガー開閉メニュー
 $(".openbtn1").click(function(){
   $('.hamburger').toggleClass('hamu-open');
+  $('body').toggleClass('body-overflow');
 });
 
 $(function(){

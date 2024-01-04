@@ -884,6 +884,11 @@ outline: none;
 }
 
 /* ----jq--------- */
+
+.body-overflow {
+  overflow-y: hidden;
+}
+
 .p01,.p02,.p03,.p04,.p05 {
   opacity: 0;
   transform: translateY(50px);

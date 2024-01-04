@@ -497,8 +497,10 @@ header {
 
 #section-bottom {
   padding-bottom: 60px;
-  background-image: url(../img/message/voice75.jpg);
+  background-image: url(../img/message/message-background.jpg);
   background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media screen and (max-width: 520px){
@@ -856,6 +858,10 @@ iframe {
   }
 
   /* ---------jq------------ */
+  .body-overflow {
+    overflow-y: hidden;
+  }
+
   .fv-fadeout {
     opacity: 0;
     transition: 1.5s;
@@ -923,5 +929,5 @@ iframe {
   }
 
   #voice {
-    overflow: auto;
+    overflow: hidden;
   }

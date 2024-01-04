@@ -687,7 +687,11 @@ iframe {
   }
   }
 
-   /* --------jq---------- */
+/* --------jq---------- */
+  .body-overflow {
+   overflow-y: hidden;
+  }
+
  .main-fadeout {
   opacity: 0;
   transform: translateX(-100px);

@@ -822,6 +822,10 @@ iframe {
 }
 
 /* --------jquery--------------- */
+.body-overflow {
+  overflow-y: hidden;
+}
+
 .img01,.img03 {
   opacity: 0;
   transform: translateX(100px);
