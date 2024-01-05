@@ -1765,6 +1765,70 @@ iframe {
   }
   }
 
+  /* PAGE-TOPここから */
+
+  .pagetop {
+    width: 100%;
+    display: flex;
+  }
+
+  .pagetop p {
+    margin: 0;
+  }
+
+  #background-blue {
+    background-color: #18A0CB;
+    border: 2px solid #18A0CB;
+    margin-top: -1px;
+    width: 70%;
+    height: auto;
+  }
+
+  #background-blue p {
+    color: #18A0CB;
+    display: none;
+  }
+
+  #background-gray {
+    background-color: #262626;
+    border-bottom: 5px #262626;
+    width: 30%;
+    height: 35px;
+    margin: -1px 0 0 auto;
+    display: flex;
+    position: relative;
+  }
+
+  #background-gray a {
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding-top: 5px;
+  }
+
+  #background-gray p {
+    margin:  0 auto;
+    width: 70%;
+    font-weight: bold;
+  }
+
+  .triangle {
+    background-color: #18A0CB;
+    width: 20px;
+    height: 100%;
+    clip-path: polygon(0 0, 0% 100%, 100% 0%);
+    margin-top: -1px;
+    margin-left: -1px;
+    border: 1px solid #18A0CB;
+  }
+  .triangle p {
+    display: none;
+  }
+
+
+
   /* ----------jquery用--------------- */
   
   .body-overflow {
