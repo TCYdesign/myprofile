@@ -422,7 +422,6 @@ header {
   background-attachment: fixed;
   background-position: center;
   height: auto;
-  padding-bottom: 100px;
   padding-top: 60px;
 }
 
@@ -795,18 +794,66 @@ iframe {
     width: 80%;
   }
   }
-  /* --------jq---------- */
-  .body-overflow {
-    overflow-y: hidden;
-  }
 
-  .main-fadeout {
-    opacity: 0;
-    transform: translateX(-100px);
-    transition: 2s;
-  }
+    /* PAGE-TOPここから */
 
-  .main-fadein {
-    opacity: 1;
-    transform: translateX(0);
-  }
+    .pagetop {
+      width: 100%;
+      display: flex;
+    }
+  
+    .pagetop p {
+      margin: 0;
+    }
+  
+    #background-blue {
+      opacity: 0;
+      width: 70%;
+      height: auto;
+    }
+  
+    #background-blue p {
+      color: #ffffff;
+      display: none;
+    }
+  
+    #background-gray {
+      background-color: #262626;
+      border-bottom: 5px #262626;
+      width: 30%;
+      height: 39px;
+      margin: -1px 0 -1px auto;
+      display: flex;
+      margin-top: 100px;
+    }
+  
+    #background-gray a {
+      text-decoration: none;
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      margin: auto;
+      padding-top: 5px;
+    }
+  
+    #background-gray p {
+      margin:  0 auto;
+      width: 70%;
+      font-weight: bold;
+    }
+  
+  
+    .triangle {
+      background-color: #262626;
+      width: 22px;
+      height: 38px;
+      margin-right: -1px;
+      margin-top: -2px;
+      margin-bottom: -1px;
+      clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+      border: 1px solid #262626;
+      margin-top: 100px;
+    }
+    .triangle p {
+      display: none;
+    }

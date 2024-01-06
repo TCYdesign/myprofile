@@ -82,9 +82,21 @@ $('.voice-3-fadeout').each(function () {
     $(".voice-3-fadeout").removeClass("voice-3-fadein");
  }
 });
-
-
 });
-
 // ----------fadinここまで--------------------
+// TOPへ戻る
+$('a[href^="#"]').click(function () {
+  const speed = 600;
+  const href = $(this).attr('href');
+  let $target;
+  if (href == '#') {
+    $target = $('html');
+  }
+  else {
+    $target = $(href);
+  }
+  const position = $target.offset().top;
+  $('html, body').animate({ 'scrollTop': position }, speed, 'swing');
+  return false;
+});
 });
