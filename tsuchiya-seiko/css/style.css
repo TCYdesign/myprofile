@@ -1569,6 +1569,20 @@ animation: skewanime .5s forwards;
 
 }
 
+@media screen and (max-width: 480px){
+  .category-dd1 {
+    width: 80%;
+    text-align: left;
+    padding: 0 2%;
+  }
+
+  .category-dd2 {
+    text-align: left;
+    padding: 0 2%;
+    box-sizing: border-box;
+  }
+}
+
 
 /* -----------footer------------- */
 footer {
