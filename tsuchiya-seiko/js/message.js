@@ -1,17 +1,14 @@
 $(function(){
-
 // ハンバーガーメニュー
 $(".openbtn1").click(function () {
   $(this).toggleClass('active');
-});
-
-// ハンバーガー開閉メニュー
-$(".openbtn1").click(function(){
+  // ハンバーガー開閉
   $('.hamburger').toggleClass('hamu-open');
+  // メニューの固定
   $('body').toggleClass('body-overflow');
 });
 
-// タイトルスライドイン（main-title）
+// スクロールで開始
 $(function () {
   const scrollAmount = $(window).scrollTop();
   const windowHeight = $(window).height();
@@ -41,10 +38,9 @@ $(function () {
       $(".message-pic-fadeout").removeClass("message-pic-fadein");
    }
  });
-
 });
 
-
+// VOICE
 $(window).scroll(function () {
   const scrollAmount = $(window).scrollTop();
   const windowHeight = $(window).height();
@@ -83,7 +79,7 @@ $('.voice-3-fadeout').each(function () {
  }
 });
 });
-// ----------fadinここまで--------------------
+
 // TOPへ戻る
 $('a[href^="#"]').click(function () {
   const speed = 600;

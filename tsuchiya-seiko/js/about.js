@@ -1,23 +1,20 @@
 
 $(function(){
-
 // ハンバーガーメニュー
 $(".openbtn1").click(function () {
   $(this).toggleClass('active');
-});
-
-// ハンバーガー開閉メニュー
-$(".openbtn1").click(function(){
+  // ハンバーガー開閉
   $('.hamburger').toggleClass('hamu-open');
+  // メニューの固定
   $('body').toggleClass('body-overflow');
 });
 
-// main-fadein
+// 画面を開いたらすぐ開始
 $(function(){
   $('.main-logo').addClass('main-fadein');
   });
 
-// タイトルスライドイン（main-title）
+// スクロールで開始
 $(window).scroll(function () {
   const scrollAmount = $(window).scrollTop();
   const windowHeight = $(window).height();
@@ -29,14 +26,7 @@ $(window).scroll(function () {
       $(".main-fadeout").removeClass("main-fadein");
     }
   });
-});
-
-
-// ABOUTの画像とテキストフェードイン
-$(window).scroll(function () {
-  const scrollAmount = $(window).scrollTop();
-  const windowHeight = $(window).height();
-  // 1行目
+  // ABOUTの画像とテキストフェードイン
   $('.right').each(function () {
     const position = $(this).offset().top;
     if (scrollAmount > position - windowHeight + 100) {
@@ -141,7 +131,7 @@ $(window).scroll(function () {
     }
   });
 });
-// ----------fadinここまで--------------------
+
 // TOPへ戻る
 $('a[href^="#"]').click(function () {
   const speed = 600;

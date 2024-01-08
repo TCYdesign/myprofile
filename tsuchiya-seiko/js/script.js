@@ -1,30 +1,27 @@
 
 $(function(){
-
-
 // ハンバーガーメニュー
 $(".openbtn1").click(function () {
   $(this).toggleClass('active');
-});
-
-// ハンバーガー開閉メニュー
-$(".openbtn1").click(function(){
+  // ハンバーガー開閉
   $('.hamburger').toggleClass('hamu-open');
+  // メニューの固定
   $('body').toggleClass('body-overflow');
 });
 
 
-// main-fadein
+// 画面を開いたらすぐ開始（main-fadein）
 $(function(){
   $('.main-fadeout-h1').addClass('main-fadein-h1-p');
   $('.main-fadeout-p').addClass('main-fadein-h1-p');
   });
 
 
-// タイトルスライドイン（main-title）
+// スクロールで開始
 $(window).scroll(function () {
   const scrollAmount = $(window).scrollTop();
   const windowHeight = $(window).height();
+  // タイトルスライドイン
   $('.main-fadeout').each(function () {
     const position = $(this).offset().top;
     if (scrollAmount > position - windowHeight + 100) {
@@ -33,24 +30,7 @@ $(window).scroll(function () {
       $(".main-fadeout").removeClass("main-fadein");
     }
   });
-});
 
-$(window).scroll(function () {
-  const scrollAmount = $(window).scrollTop();
-  const windowHeight = $(window).height();
-  $('.main-fadeout3').each(function () {
-    const position = $(this).offset().top;
-    if (scrollAmount > position - windowHeight + 100) {
-      $(this).addClass('main-fadein');
-    }else {
-      $(".main-fadeout3").removeClass("main-fadein");
-    }
-  });
-});
-
-$(window).scroll(function () {
-  const scrollAmount = $(window).scrollTop();
-  const windowHeight = $(window).height();
   $('.main-fadeout2').each(function () {
     const position = $(this).offset().top;
     if (scrollAmount > position - windowHeight + 100) {
@@ -59,11 +39,16 @@ $(window).scroll(function () {
       $(".main-fadeout2").removeClass("main-fadein");
     }
   });
-});
 
-$(window).scroll(function () {
-  const scrollAmount = $(window).scrollTop();
-  const windowHeight = $(window).height();
+  $('.main-fadeout3').each(function () {
+    const position = $(this).offset().top;
+    if (scrollAmount > position - windowHeight + 100) {
+      $(this).addClass('main-fadein');
+    }else {
+      $(".main-fadeout3").removeClass("main-fadein");
+    }
+  });
+
   $('.main-fadeout4').each(function () {
     const position = $(this).offset().top;
     if (scrollAmount > position - windowHeight + 100) {
@@ -72,13 +57,8 @@ $(window).scroll(function () {
       $(".main-fadeout4").removeClass("main-fadein");
     }
   });
-});
 
-// ABOUTの画像とテキストフェードイン
-$(window).scroll(function () {
-  const scrollAmount = $(window).scrollTop();
-  const windowHeight = $(window).height();
-  // 1行目
+  // ABOUT1行目
   $('.right').each(function () {
     const position = $(this).offset().top;
     if (scrollAmount > position - windowHeight + 100) {
@@ -95,7 +75,7 @@ $(window).scroll(function () {
       $(".left").removeClass("fadein-left");
     }
   });
-  // 2行目
+  // ABOUT2行目
   $('.right-2').each(function () {
     const position = $(this).offset().top;
     if (scrollAmount > position - windowHeight + 100) {
@@ -112,7 +92,7 @@ $(window).scroll(function () {
       $(".left-2").removeClass("fadein-left");
     }
   });
-  // 3行目
+  // ABOUT3行目
   $('.right-3').each(function () {
     const position = $(this).offset().top;
     if (scrollAmount > position - windowHeight + 100) {
@@ -129,12 +109,7 @@ $(window).scroll(function () {
       $(".left-3").removeClass("fadein-left");
     }
   });
-});
-
-// ボタンフェードイン（btn-1）
-$(window).scroll(function () {
-  const scrollAmount = $(window).scrollTop();
-  const windowHeight = $(window).height();
+  // ボタンフェードイン（btn-1）
   $('.btn-1-fadeout').each(function () {
     const position = $(this).offset().top;
     if (scrollAmount > position - windowHeight + 100) {
@@ -143,11 +118,7 @@ $(window).scroll(function () {
       $(".btn-1-fadeout").removeClass("btn-1-fadein");
     }
   });
-});
 
-$(window).scroll(function () {
-  const scrollAmount = $(window).scrollTop();
-  const windowHeight = $(window).height();
   $('.btn-1-fadeout2').each(function () {
     const position = $(this).offset().top;
     if (scrollAmount > position - windowHeight + 100) {
@@ -156,12 +127,7 @@ $(window).scroll(function () {
       $(".btn-1-fadeout2").removeClass("btn-1-fadein");
     }
   });
-});
-
-// PRODUCT画像（img-wrap）
-$(window).scroll(function () {
-  const scrollAmount = $(window).scrollTop();
-  const windowHeight = $(window).height();
+  // PRODUCT画像（img-wrap）
   $('.img-wrap-none').each(function () {
     const position = $(this).offset().top;
     if (scrollAmount > position - windowHeight + 100) {
@@ -171,6 +137,7 @@ $(window).scroll(function () {
     }
   });
 });
+
 
 // TOPへ戻る
 $('a[href^="#"]').click(function () {
@@ -187,6 +154,4 @@ $('a[href^="#"]').click(function () {
   $('html, body').animate({ 'scrollTop': position }, speed, 'swing');
   return false;
 });
-
-
 });

@@ -1,23 +1,20 @@
 $(function(){
-
-// ハンバーガーメニュー
+  // ハンバーガーメニュー
 $(".openbtn1").click(function () {
   $(this).toggleClass('active');
-});
-
-// ハンバーガー開閉メニュー
-$(".openbtn1").click(function(){
+  // ハンバーガー開閉
   $('.hamburger').toggleClass('hamu-open');
+  // メニューの固定
   $('body').toggleClass('body-overflow');
 });
 
-// main-fadein
+// 画面を開いたらすぐ開始
 $(function(){
   $('.main-slide-h1').addClass('main-slidein');
   $('.main-slide-p').addClass('main-slidein');
   });
 
-// 画像のフェードイン
+// スクロールで開始
 $(window).scroll(function () {
   const scrollAmount = $(window).scrollTop();
   const windowHeight = $(window).height();
@@ -55,7 +52,6 @@ $(window).scroll(function () {
     }
   });
 });
-// ----------fadinここまで--------------------
 // TOPへ戻る
 $('a[href^="#"]').click(function () {
   const speed = 600;

@@ -1,18 +1,15 @@
 
 $(function(){
-
 // ハンバーガーメニュー
 $(".openbtn1").click(function () {
   $(this).toggleClass('active');
-});
-
-// ハンバーガー開閉メニュー
-$(".openbtn1").click(function(){
+  // ハンバーガー開閉
   $('.hamburger').toggleClass('hamu-open');
+  // メニューの固定
   $('body').toggleClass('body-overflow');
 });
 
-// main-fadein
+// 画面を開いたらすぐ開始
 $(function(){
   $('.main-fadeout').addClass('main-fadein');
   });
@@ -32,5 +29,4 @@ $('a[href^="#"]').click(function () {
   $('html, body').animate({ 'scrollTop': position }, speed, 'swing');
   return false;
 });
-
 });

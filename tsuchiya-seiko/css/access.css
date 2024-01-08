@@ -454,6 +454,7 @@ width: 100%;
     align-items: center;
     margin: 10px auto 0 auto;
     max-width: 580px;
+    margin-bottom: 40px
   }
 
   #left {
