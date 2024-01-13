@@ -337,7 +337,7 @@ header {
 /* ハンバーガーメニューを開いた時の画面ここまで */
 /* --------main-picここから------------ */
 main {
-  background-image: url(../img/index/background20%.jpg);
+  background-image: url(../img/index/background.jpg);
   background-size: cover;
   background-attachment: fixed;
 }

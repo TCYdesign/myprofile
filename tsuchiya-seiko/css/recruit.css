@@ -810,8 +810,12 @@ iframe {
   }
 
   main {
-      background-image: url(../img/index/background20%.jpg);
+      background-image: url(../img/index/background.jpg);
       background-size: cover;
       background-attachment: fixed;
       position: relative;
+  }
+
+  .body-overflow {
+    overflow-y: hidden;
   }
