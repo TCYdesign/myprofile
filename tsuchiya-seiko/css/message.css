@@ -336,6 +336,12 @@ header {
 
 /* ハンバーガーメニューを開いた時の画面ここまで */
 /* --------main-picここから------------ */
+main {
+  background-image: url(../img/index/background20%.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .main-pic {
   position: relative;
   width: 100%;
@@ -419,7 +425,7 @@ header {
   font-size: 8vw;
   margin-top : 1rem;
   margin-bottom: 1rem;
-  color: #B9B9B9;
+  color: #18A0CB;
 }
 
 /* voice専用 */

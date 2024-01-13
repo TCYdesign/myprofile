@@ -337,6 +337,7 @@ header {
 /* -----------main-picここから -------------*/
 .main-pic {
   position: relative;
+  height: 100dvh;
 }
 
 #main-pic {
@@ -381,6 +382,12 @@ header {
 
 /* -------------------main-picここまで------------- */
 /* -------------ABOUTタイトルここから---------------------- */
+article {
+  background-image: url(../img/about/background20%.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .main-title {
   font-weight: bold; 
   display: flex;

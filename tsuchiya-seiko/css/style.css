@@ -425,7 +425,7 @@ header {
   font-size: 8vw;
   margin-top : 1rem;
   margin-bottom: 1rem;
-  color: #B9B9B9;
+  color: #18A0CB;
 }
 
 @media screen and (max-width: 1280px){
@@ -453,6 +453,12 @@ header {
 }
 
 /* --------aboutタイトルここまで------------ */
+#about-article {
+  background-image: url(../img/index/background20%.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 #about-div {
   position: relative;
   margin: 0 auto;

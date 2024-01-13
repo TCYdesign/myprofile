@@ -6,6 +6,7 @@ body {
 article {
   overflow-x: hidden;
 }
+
 /* -----------headerここから------------*/
 header {
   display: flex;

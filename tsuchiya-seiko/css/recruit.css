@@ -344,7 +344,7 @@ header {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  background-color: #fff;
+  /* background-color: #fff; */
   position: relative;
 }
 
@@ -352,7 +352,7 @@ header {
   font-size: 6em;
   margin-top : 1rem;
   margin-bottom: 1rem;
-  color: #B9B9B9;
+  color: #5b5b5b;
 }
 
 .title-center {
@@ -382,7 +382,6 @@ header {
   .main-title{
     align-items: baseline;
     position: relative;
-    background-color: #fff;
   }
 
   .title-left {
@@ -808,4 +807,11 @@ iframe {
   }
   .triangle p {
     display: none;
+  }
+
+  main {
+      background-image: url(../img/index/background20%.jpg);
+      background-size: cover;
+      background-attachment: fixed;
+      position: relative;
   }

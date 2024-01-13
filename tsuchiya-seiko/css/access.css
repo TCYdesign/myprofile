@@ -344,14 +344,14 @@ header {
   align-items: center;
   width: 100%;
   position: relative;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
 .title-left {
   font-size: 6em;
   margin-top : 1rem;
   margin-bottom: 1rem;
-  color: #B9B9B9;
+  color: #5b5b5b;
   width: 50%;
   text-align: center;
 }
@@ -360,7 +360,7 @@ header {
   width: 35%;
   max-width: 40%;
   height: 3px;
-  background-color: #000;
+  /* background-color: #000; */
   margin: 0 auto;
 }
 
@@ -390,7 +390,6 @@ header {
 
   .main-title {
     position: relative;
-    background-color: #fff;
   }
 }
 /* -------タイトルここまで--------------- */
@@ -436,6 +435,13 @@ width: 100%;
 
 .text p {
   margin: 0;
+}
+
+main {
+  background-image: url(../img/index/background20%.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
 }
 
 @media screen and (max-width: 580px){
