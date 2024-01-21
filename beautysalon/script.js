@@ -22,16 +22,10 @@ $(window).scroll(function () {
   }
 });
 
-$(window).scroll(function () {
-  const scrollAmount = $(window).scrollTop();
-  const windowHeight = $(window).height();
-  $('.yoko').each(function () {
-    const position = $(this).offset().top;
-    if (scrollAmount > position - windowHeight + 20) {
-      $(this).addClass('fade-in');
-    }
+
+$(function(){
+  $('.yoko').addClass('fade-in');
   });
-});
 
 $(window).scroll(function () {
   const scrollAmount = $(window).scrollTop();
@@ -61,37 +55,23 @@ $(window).scroll(function () {
   const windowHeight = $(window).height();
   $('.b-right').each(function () {
     const position = $(this).offset().top;
-    if (scrollAmount > position - windowHeight + 150) {
+    if (scrollAmount > position - windowHeight + 100) {
       $(this).addClass('fade-in-b-right');
     }
   });
-});
-
-$(window).scroll(function () {
-  const scrollAmount = $(window).scrollTop();
-  const windowHeight = $(window).height();
   $('.b-left').each(function () {
     const position = $(this).offset().top;
-    if (scrollAmount > position - windowHeight + 200) {
+    if (scrollAmount > position - windowHeight + 100) {
       $(this).addClass('fade-in-b-left');
     }
   });
-});
 
-$(window).scroll(function () {
-  const scrollAmount = $(window).scrollTop();
-  const windowHeight = $(window).height();
   $('.company-left').each(function () {
     const position = $(this).offset().top;
     if (scrollAmount > position - windowHeight + 250) {
       $(this).addClass('fade-in-aboutleft');
     }
   });
-});
-
-$(window).scroll(function () {
-  const scrollAmount = $(window).scrollTop();
-  const windowHeight = $(window).height();
   $('.company-right').each(function () {
     const position = $(this).offset().top;
     if (scrollAmount > position - windowHeight + 250) {
